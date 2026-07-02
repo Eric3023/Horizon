@@ -8,10 +8,7 @@
     "temperature": 0.3,
     "max_tokens": 8192,
     "throttle_sec": 1,
-    "languages": [
-      "zh",
-      "en"
-    ],
+    "languages": ["zh", "en"],
     "analysis_concurrency": 5,
     "enrichment_concurrency": 5
   },
@@ -45,7 +42,7 @@
     "hackernews": {
       "enabled": true,
       "fetch_top_stories": 30,
-      "min_score": 150
+      "min_score": 200
     },
     "rss": [
       {
@@ -71,6 +68,60 @@
         "url": "https://lwn.net/headlines/full_text?key=${LWN_KEY}",
         "enabled": false,
         "category": "linux-kernel"
+      },
+      {
+        "name": "Yonhap News English",
+        "url": "https://en.yna.co.kr/rss/eng.xml",
+        "enabled": true,
+        "category": "asia-news"
+      },
+      {
+        "name": "The Korea Herald",
+        "url": "https://www.thekoreaherald.com/rss/",
+        "enabled": true,
+        "category": "asia-news"
+      },
+      {
+        "name": "Nikkei Asia",
+        "url": "https://asia.nikkei.com/rss/feed/nar-wholesite.rdf",
+        "enabled": true,
+        "category": "asia-news"
+      },
+      {
+        "name": "BBC World News",
+        "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+        "enabled": true,
+        "category": "world-news"
+      },
+      {
+        "name": "Reuters World",
+        "url": "https://feeds.reuters.com/reuters/worldNews",
+        "enabled": true,
+        "category": "world-news"
+      },
+      {
+        "name": "DW English",
+        "url": "https://www.dw.com/en/top-stories/s-9097?format=rss",
+        "enabled": true,
+        "category": "world-news"
+      },
+      {
+        "name": "Le Monde English",
+        "url": "https://www.lemonde.fr/en/rss/une.xml",
+        "enabled": true,
+        "category": "world-news"
+      },
+      {
+        "name": "Al Jazeera English",
+        "url": "https://www.aljazeera.com/xml/rss/all.xml",
+        "enabled": true,
+        "category": "world-news"
+      },
+      {
+        "name": "AP News Top (via RSSHub)",
+        "url": "https://rsshub.app/apnews/topics/ap-top-news",
+        "enabled": true,
+        "category": "world-news"
       }
     ],
     "reddit": {
@@ -81,35 +132,29 @@
           "enabled": true,
           "sort": "hot",
           "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 60
+          "fetch_limit": 12,
+          "min_score": 50
         },
         {
           "subreddit": "LocalLLaMA",
           "enabled": true,
           "sort": "hot",
           "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 60
+          "fetch_limit": 15,
+          "min_score": 40
         }
       ],
       "users": [],
-      "fetch_comments": 10
+      "fetch_comments": 8
     },
     "telegram": {
       "enabled": false,
-      "channels": [
-        {
-          "channel": "zaihuapd",
-          "enabled": true,
-          "fetch_limit": 20
-        }
-      ]
+      "channels": []
     }
   },
   "filtering": {
     "ai_score_threshold": 6.0,
-    "time_window_hours": 24
+    "time_window_hours": 48
   },
   "webhook": {
     "enabled": true,
@@ -119,9 +164,7 @@
     "platform": "feishu",
     "layout": "collapsible",
     "fallback_layout": "markdown",
-    "languages": [
-      "zh"
-    ],
+    "languages": ["zh"],
     "request_body": {
       "msg_type": "interactive",
       "card": {
@@ -146,6 +189,6 @@
         }
       }
     },
-    "headers": ""
+    "headers": {}
   }
 }
