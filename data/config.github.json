@@ -1,10 +1,10 @@
 {
   "version": "1.0",
   "ai": {
-    "provider": "deepseek",
-    "model": "deepseek-v4-flash",
-    "base_url": "https://api.deepseek.com",
-    "api_key_env": "DEEPSEEK_API_KEY",
+    "provider": "openai",
+    "model": "glm-4-flash",
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url": "https://open.bigmodel.cn/api/paas/v4/",
     "temperature": 0.3,
     "max_tokens": 8192,
     "throttle_sec": 1,
@@ -15,6 +15,7 @@
     "analysis_concurrency": 5,
     "enrichment_concurrency": 5
   },
+  "language": "zh-CN",
   "sources": {
     "github": [
       {
@@ -68,7 +69,7 @@
       {
         "name": "LWN.net",
         "url": "https://lwn.net/headlines/full_text?key=${LWN_KEY}",
-        "enabled": true,
+        "enabled": false,
         "category": "linux-kernel"
       }
     ],
@@ -96,7 +97,7 @@
       "fetch_comments": 10
     },
     "telegram": {
-      "enabled": true,
+      "enabled": false,
       "channels": [
         {
           "channel": "zaihuapd",
@@ -107,7 +108,7 @@
     }
   },
   "filtering": {
-    "ai_score_threshold": 8.0,
+    "ai_score_threshold": 6.0,
     "time_window_hours": 24
   },
   "webhook": {
