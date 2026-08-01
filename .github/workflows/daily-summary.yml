@@ -4,7 +4,7 @@ on:
   schedule:
     # GitHub scheduled workflows use UTC and can be heavily delayed at the top
     # of the hour. 00:17 UTC is 08:17 Asia/Shanghai.
-    - cron: '17 0 * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:      # Allow manual trigger
 
 jobs:
